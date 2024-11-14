@@ -91,7 +91,7 @@ export default class Dependencies {
     //
     Object
       .getOwnPropertyNames(require.cache)
-      .filter(path => path.substr(0, nmdir.length) === nmdir)
+      .filter(path => path.substring(0, nmdir.length) === nmdir)
       .forEach((filename) => {
         delete require.cache[filename]
       })
