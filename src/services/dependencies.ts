@@ -9,9 +9,7 @@ interface CtorArgs {
   searchPaths: string[];
 }
 
-interface WatchCallback {
-  (path: string): void;
-}
+type WatchCallback = (path: string) => void
 
 /**
  * Utility function for flatting w/ Array.reduce

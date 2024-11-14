@@ -58,9 +58,7 @@ export interface ScriptSecurity {
   allow: string[];
 }
 
-export interface ScriptFn {
-  (args: exec.Args, ctx?: exec.Ctx): unknown;
-}
+export type ScriptFn = (args: exec.Args, ctx?: exec.Ctx) => unknown
 
 export interface Watcher {
   watch (): void;

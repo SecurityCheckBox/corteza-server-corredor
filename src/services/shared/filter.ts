@@ -14,7 +14,7 @@ interface TriggerFilterArgs {
 /**
  * Creates Array.filter() compatible function for filtering script array
  */
-export default function (f: ListFilter): {(Script): boolean} {
+export default function (f: ListFilter): ((item: Script) => boolean) {
   return (item: Script): boolean => {
     if (f === undefined) {
       // Match all when no filter
